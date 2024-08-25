@@ -6,15 +6,15 @@ import org.apache.logging.log4j.Logger;
 
 class MyService {
     private static final Logger LOGGER = LogManager.getLogger();
-//    private final OneService oneService;
+    private final SomeService someService;
 
     @Inject
-    MyService(/*OneService oneService*/) {
-//        this.oneService = oneService;
+    MyService(SomeService someService) {
+        this.someService = someService;
     }
 
     void performService() {
-//        oneService.performService();
-        LOGGER.info("Performing service");
+        LOGGER.info("Performing Service");
+        someService.performService();
     }
 }
