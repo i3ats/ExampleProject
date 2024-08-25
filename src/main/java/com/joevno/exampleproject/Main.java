@@ -15,7 +15,9 @@ public class Main {
 
         // Now imagine that we need to build stuff that is aware of a Model
         val model = loadModelFromFile();
-        // By creating a child, we inherit all the Module bindings from the parent
+
+        // By creating a child, we inherit all the Module bindings from the parent,
+        // and we have the opportunity to inject our runtime dependency (Model)
         val modelInjector = baseInjector.createChildInjector(new ModelModule(model));
         val service = modelInjector.getInstance(ModelService.class);
         service.performService();

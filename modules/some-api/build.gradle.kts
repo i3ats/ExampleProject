@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("io.freefair.lombok")
+    alias(libs.plugins.io.freefair.lombok)
 }
 
 group = "org.example"

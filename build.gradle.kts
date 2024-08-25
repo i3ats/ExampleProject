@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    kotlin("jvm")
-    id("io.freefair.lombok")
+    alias(libs.plugins.org.jetbrains.kotlin.jvm)
+    alias(libs.plugins.io.freefair.lombok)
 }
 
 group = "org.example"
@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation(libs.guice)
+    implementation(libs.guava)
     implementation(libs.auto.service.annotations)
     annotationProcessor(libs.auto.service)
     testImplementation(platform(libs.junit.bom))
