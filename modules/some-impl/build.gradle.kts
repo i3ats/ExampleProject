@@ -20,8 +20,8 @@ dependencies {
     testImplementation(libs.junit.jupiter)
 
     // Logging
-    implementation("org.apache.logging.log4j:log4j-core:2.20.0")
-    implementation("org.apache.logging.log4j:log4j-api:2.20.0")
+    implementation(libs.log4j.core)
+    implementation(libs.log4j.api)
 
 }
 

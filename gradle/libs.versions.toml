@@ -3,25 +3,27 @@
 [plugins]
 
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-
 io-freefair-lombok = { id = "io.freefair.lombok", version = "8.4" }
 
 [versions]
 
 kotlin = "2.0.20"
-
 junit = "5.11.0"
 
 [libraries]
 
+# DI and Services
 auto-service = "com.google.auto.service:auto-service:1.1.1"
-
+javax-inject = "javax.inject:javax.inject:1"
 guice = "com.google.inject:guice:7.0.0"
-
 auto-service-annotations = "com.google.auto.service:auto-service-annotations:1.1.1"
 
-kotlin-scripting-compiler-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-scripting-compiler-embeddable", version.ref = "kotlin" }
-
+# Testing
 junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
-
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+
+# Logging
+log4j-core = "org.apache.logging.log4j:log4j-core:2.23.1"
+log4j-api = "org.apache.logging.log4j:log4j-api:2.23.1"
+
+kotlin-scripting-compiler-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-scripting-compiler-embeddable", version.ref = "kotlin" }
