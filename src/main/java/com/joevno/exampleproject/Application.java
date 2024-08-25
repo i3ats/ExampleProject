@@ -2,11 +2,11 @@ package com.joevno.exampleproject;
 
 import com.google.inject.Inject;
 
-public class MyApplication {
-    private final MyStartupService service;
+public class Application {
+    private final StartupService service;
 
     @Inject
-    public MyApplication(MyStartupService service) {
+    public Application(StartupService service) {
         this.service = service;
     }
 

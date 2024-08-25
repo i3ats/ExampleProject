@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 /**
  * Imagine this does things like connect to a DB and get the app started.
  */
-public class MyStartupService {
+public class StartupService {
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Inject
-    MyStartupService() {
+    StartupService() {
     }
 
     void performService() {

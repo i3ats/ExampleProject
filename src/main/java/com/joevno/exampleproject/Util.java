@@ -4,8 +4,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ServiceLoader;
 
-final class MyUtil {
-    private MyUtil() {
+final class Util {
+    private Util() {
         // functions
     }
 
