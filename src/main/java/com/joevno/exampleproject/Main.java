@@ -9,6 +9,8 @@ import lombok.val;
  */
 public class Main {
     public static void main(String[] args) {
+        // We start by creating a base injector that binds the Application class
+        // It also binds the StartupService class, which is what we wanted to have run
         val baseInjector = Guice.createInjector(new BaseModule());
         val app = baseInjector.getInstance(Application.class);
         app.run();
