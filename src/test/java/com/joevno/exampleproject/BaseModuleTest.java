@@ -17,4 +17,12 @@ class BaseModuleTest {
         val app = injector.getInstance(Application.class);
         Assertions.assertInstanceOf(Application.class, app);
     }
+
+    @Test
+    void testSomeServiceIsSingleton() {
+        val injector = Guice.createInjector(new BaseModule());
+        val service1 = injector.getInstance(SomeService.class);
+        val service2 = injector.getInstance(SomeService.class);
+        Assertions.assertSame(service1, service2);
+    }
 }

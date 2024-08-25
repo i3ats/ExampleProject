@@ -1,6 +1,7 @@
 package com.joevno.exampleproject;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Singleton;
 import com.joevno.exampleproject.domain.Model;
 
 /**
@@ -17,7 +18,7 @@ public class ModelModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(Model.class).toInstance(model);
-        bind(ModelService.class);
+        bind(ModelService.class).in(Singleton.class);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.joevno.exampleproject;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Singleton;
 
 import static com.joevno.exampleproject.Util.loadFirst;
 
@@ -11,10 +12,10 @@ import static com.joevno.exampleproject.Util.loadFirst;
 public class BaseModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(StartupService.class);
-        bind(MyService.class);
-        // Bind a Service defined in a different Java Module
-        bind(SomeService.class).toProvider(loadFirst(SomeService.SomeServiceProvider.class));
+        bind(StartupService.class).in(Singleton.class);
+        bind(MyService.class).in(Singleton.class);
+        // Bind a Service defined in a different Java Module. Note that we still need to specify it is a Singleton here.
+        bind(SomeService.class).toProvider(loadFirst(SomeService.SomeServiceProvider.class)).in(Singleton.class);
     }
 
 }

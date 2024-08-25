@@ -16,4 +16,12 @@ class SomeInjectorTest {
         Assertions.assertInstanceOf(SomeService.class, service);
     }
 
+    @Test
+    void testSomeServiceIsSingleton() {
+        val injector = SomeInjector.getInjector();
+        val service1 = injector.getInstance(SomeService.class);
+        val service2 = injector.getInstance(SomeService.class);
+        Assertions.assertSame(service1, service2);
+    }
+
 }
