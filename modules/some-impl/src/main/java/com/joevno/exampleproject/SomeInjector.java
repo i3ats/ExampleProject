@@ -3,6 +3,9 @@ package com.joevno.exampleproject;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+/**
+ * This class is a singleton that provides access to the Guice Injector.
+ */
 public class SomeInjector {
 
     private SomeInjector() {

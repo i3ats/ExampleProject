@@ -4,6 +4,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.ServiceLoader;
 
+/**
+ * This class is a utility class.
+ */
 final class Util {
     private Util() {
         // functions

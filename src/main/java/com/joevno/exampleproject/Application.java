@@ -1,7 +1,10 @@
 package com.joevno.exampleproject;
 
-import com.google.inject.Inject;
+import jakarta.inject.Inject;
 
+/**
+ * This class is the entry point for the application.
+ */
 public class Application {
     private final StartupService service;
 

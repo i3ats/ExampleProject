@@ -5,6 +5,9 @@ import jakarta.inject.Inject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Concrete implementation of the SomeService interface.
+ */
 public class SomeServiceImpl implements SomeService {
 
     private static final Logger LOGGER = LogManager.getLogger();
@@ -22,6 +25,9 @@ public class SomeServiceImpl implements SomeService {
         anotherService.performService();
     }
 
+    /**
+     * This class is a Guice Provider for the SomeService interface.
+     */
     @AutoService(SomeServiceProvider.class)
     public static class SomeServiceProviderImpl implements SomeServiceProvider {
 
