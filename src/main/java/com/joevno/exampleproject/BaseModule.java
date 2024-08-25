@@ -14,7 +14,9 @@ public class BaseModule extends AbstractModule {
         bind(StartupService.class).in(Singleton.class);
         bind(MyService.class).in(Singleton.class);
         // Bind a Service defined in a different Java Module. Note that we still need to specify it is a Singleton here.
-        bind(SomeService.class).toProvider(loadFirst(SomeService.SomeServiceProvider.class)).in(Singleton.class);
+        bind(SomeService.class)
+                .toProvider(loadFirst(SomeService.SomeServiceProvider.class))
+                .in(Singleton.class);
     }
 
 }

@@ -1,0 +1,27 @@
+# EditorConfig is a file format and collection of text editor plugins for maintaining consistent coding styles between different editors and IDEs.
+# More information can be found at http://editorconfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# 4 space indentation for Java and Kotlin files
+[*.{java,kt}]
+indent_style = space
+indent_size = 4
+
+# Tab indentation for Makefiles
+[Makefile]
+indent_style = tab
+
+# Trim trailing whitespace for Java, Kotlin, and Markdown files
+[*.{java,kt,md}]
+trim_trailing_whitespace = true
+
+# UTF-8 encoding for Java, Kotlin, and Markdown files
+[*.{java,kt,md}]
+charset = utf-8
