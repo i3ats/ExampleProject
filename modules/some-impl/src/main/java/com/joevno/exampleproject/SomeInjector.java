@@ -4,17 +4,17 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 public class SomeInjector {
-    private static Injector injector;
 
     private SomeInjector() {
         // Private constructor to prevent instantiation
     }
 
-    public static synchronized Injector getInjector() {
-        if (injector == null) {
-            injector = Guice.createInjector(new SomeModule());
-        }
-        return injector;
+    private static class LazyHolder {
+        static final Injector INSTANCE = Guice.createInjector(new SomeModule());
+    }
+
+    static Injector getInjector() {
+        return LazyHolder.INSTANCE;
     }
 
     public static <T> T getInstance(Class<T> tClass) {
