@@ -4,8 +4,7 @@ import com.google.inject.AbstractModule;
 import jakarta.inject.Singleton;
 
 /**
- * This class is a Guice Module that binds the SomeService and AnotherService
- * interfaces to their implementations.
+ * This class is a Guice Module that binds the SomeService and AnotherService.
  */
 public class SomeModule extends AbstractModule {
     @Override
