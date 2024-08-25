@@ -6,8 +6,8 @@ plugins {
     alias(libs.plugins.io.freefair.lombok)
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "com.joevno.exampleproject"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
@@ -16,18 +16,18 @@ repositories {
 dependencies {
     implementation(libs.guice)
     implementation(libs.guava)
+    implementation(libs.javax.inject)
     implementation(libs.auto.service.annotations)
-    annotationProcessor(libs.auto.service)
-    testImplementation(platform(libs.junit.bom))
-    testImplementation(libs.junit.jupiter)
-
-    // Our modules -- we define a Service in the API and then implement it in the Impl module
     implementation(project(":modules:some-api"))
-    runtimeOnly(project(":modules:some-impl"))
-
-    // Logging
     implementation(libs.log4j.core)
     implementation(libs.log4j.api)
+
+    runtimeOnly(project(":modules:some-impl"))
+
+    annotationProcessor(libs.auto.service)
+
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
 }
 
 tasks.test {
