@@ -10,3 +10,6 @@ The point of this project is to demonstrate a few things:
 ## Getting started
 
 Run Main.
+
+## Where to go from here
+- you could wrap Model and the child Injector in a new Class that operates more like a Service Locator. This might work better in your project.
