@@ -1,3 +1,5 @@
+import java.util.*
+
 plugins {
     id("java")
     alias(libs.plugins.org.jetbrains.kotlin.jvm)
@@ -30,4 +32,19 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+
+
+// Check if gradle-local.properties exists and load it
+val localPropertiesFile = file("gradle-local.properties")
+
+if (localPropertiesFile.exists()) {
+    val localProperties = Properties()
+    localPropertiesFile.inputStream().use { inputStream ->
+        localProperties.load(inputStream)
+    }
+    localProperties.forEach { key, value ->
+        project.extensions.extraProperties[key.toString()] = value
+    }
 }
