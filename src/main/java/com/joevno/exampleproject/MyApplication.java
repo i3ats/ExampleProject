@@ -3,14 +3,14 @@ package com.joevno.exampleproject;
 import com.google.inject.Inject;
 
 public class MyApplication {
-    private final MyService myService;
+    private final MyStartupService service;
 
     @Inject
-    public MyApplication(MyService myService) {
-        this.myService = myService;
+    public MyApplication(MyStartupService service) {
+        this.service = service;
     }
 
     public void run() {
-        myService.performService();
+        service.performService();
     }
 }

@@ -5,14 +5,18 @@ import jakarta.inject.Inject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MyOtherService {
+/**
+ * This Service depends on a Model.
+ * So it needs to be built after its Model has been created if we are going to use constructor-based DI.
+ */
+public class MyModelService {
 
     private static final Logger LOGGER = LogManager.getLogger();
     private final MyService myService;
     private final Model model;
 
     @Inject
-    MyOtherService(Model model, MyService myService) {
+    MyModelService(Model model, MyService myService) {
         this.model = model;
         this.myService = myService;
     }
