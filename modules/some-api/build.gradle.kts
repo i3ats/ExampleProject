@@ -10,7 +10,6 @@ repositories {
 dependencies {
     implementation(libs.guice)
     implementation(libs.guava)
-    implementation(libs.javax.inject)
     implementation(libs.auto.service.annotations)
     annotationProcessor(libs.auto.service)
     testImplementation(platform(libs.junit.bom))

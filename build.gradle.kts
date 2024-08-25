@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.joevno.exampleproject"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,6 @@ repositories {
 dependencies {
     implementation(libs.guice)
     implementation(libs.guava)
-    implementation(libs.javax.inject)
     implementation(libs.auto.service.annotations)
     implementation(project(":modules:some-api"))
     implementation(libs.log4j.core)

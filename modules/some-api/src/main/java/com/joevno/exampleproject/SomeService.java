@@ -1,8 +1,6 @@
 package com.joevno.exampleproject;
 
-//import javax.inject.Provider;
-
-import com.google.inject.Provider;
+import jakarta.inject.Provider;
 
 public interface SomeService {
     void performService();

@@ -2,8 +2,8 @@
 
 [plugins]
 
-org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.0.20" }
-io-freefair-lombok = { id = "io.freefair.lombok", version = "8.10" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+io-freefair-lombok = { id = "io.freefair.lombok", version.ref = "lombok" }
 
 [versions]
 
@@ -17,7 +17,6 @@ auto-service = "com.google.auto.service:auto-service:1.1.1"
 auto-service-annotations = "com.google.auto.service:auto-service-annotations:1.1.1"
 guice = "com.google.inject:guice:7.0.0"
 guava = "com.google.guava:guava:33.3.0-jre"
-javax-inject = "javax.inject:javax.inject:1"
 
 junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
